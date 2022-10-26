@@ -1,5 +1,5 @@
 import 'package:dating_app/components/box_button.dart';
-import 'package:dating_ap/components/onboarding_slide.dart';
+import 'package:dating_app/components/onboarding_slide.dart';
 import 'package:dating_app/pages/dashboard_page.dart';
 import 'package:dating_app/theme/color.dart';
 import 'package:dating_app/utils/constant.dart';

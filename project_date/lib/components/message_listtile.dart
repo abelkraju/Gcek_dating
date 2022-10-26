@@ -1,15 +1,14 @@
-
-import 'package:dating_app_clone/theme/color.dart';
-import 'package:dating_app_clone/utils/constant.dart';
+import 'package:dating_app/theme/color.dart';
+import 'package:dating_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 class MessageListTitle extends StatelessWidget {
   final itemList;
   final VoidCallback onTap;
-  
+
   const MessageListTitle({
-    Key? key, 
-    this.itemList, 
+    Key? key,
+    this.itemList,
     required this.onTap,
   }) : super(key: key);
 
@@ -19,7 +18,8 @@ class MessageListTitle extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: defaultPadding, vertical: defaultSmallPadding),
+        padding: const EdgeInsets.symmetric(
+            horizontal: defaultPadding, vertical: defaultSmallPadding),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -33,14 +33,12 @@ class MessageListTitle extends StatelessWidget {
               ),
               child: Container(
                 decoration: BoxDecoration(
-                  color: white,
-                  shape: BoxShape.circle,
-                  border: Border.all(width: 2, color: white),
-                  image: DecorationImage(
-                    image: NetworkImage(itemList["imageUrl"]),
-                    fit: BoxFit.cover
-                  )
-                ),
+                    color: white,
+                    shape: BoxShape.circle,
+                    border: Border.all(width: 2, color: white),
+                    image: DecorationImage(
+                        image: NetworkImage(itemList["imageUrl"]),
+                        fit: BoxFit.cover)),
               ),
             ),
             Column(
@@ -50,7 +48,8 @@ class MessageListTitle extends StatelessWidget {
                     Container(
                       height: (size.width - 40) * 0.15,
                       width: (size.width - 40) * 0.7,
-                      padding: EdgeInsets.symmetric(horizontal: defaultMediumPadding),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: defaultMediumPadding),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,36 +77,36 @@ class MessageListTitle extends StatelessWidget {
                         children: [
                           Text(
                             itemList["dateTime"],
-                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                           itemList['isUnread']
-                          ? Container(
-                            padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: primary,
-                              shape: BoxShape.circle
-                            ),
-                            child: Text(
-                              itemList['unread'],
-                              style: TextStyle(
-                                color: white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold
-                              ),
-                            ),
-                          )
-                          : SizedBox(),
+                              ? Container(
+                                  padding: EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                      color: primary, shape: BoxShape.circle),
+                                  child: Text(
+                                    itemList['unread'],
+                                    style: TextStyle(
+                                        color: white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                              : SizedBox(),
                         ],
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: defaultSmallPadding,),
+                SizedBox(
+                  height: defaultSmallPadding,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(left: defaultMediumPadding),
                   child: Container(
                     height: 1,
-                    width: (size.width - 60)  * 0.85,
+                    width: (size.width - 60) * 0.85,
                     color: bgBorder,
                   ),
                 )
