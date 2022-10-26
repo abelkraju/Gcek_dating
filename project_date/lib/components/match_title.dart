@@ -1,6 +1,5 @@
-
-import 'package:dating_app_clone/theme/color.dart';
-import 'package:dating_app_clone/utils/constant.dart';
+import 'package:dating_app/theme/color.dart';
+import 'package:dating_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 class MatchTitle extends StatelessWidget {
@@ -15,12 +14,21 @@ class MatchTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: Divider(color: bgBorder,)),
+        Expanded(
+            child: Divider(
+          color: bgBorder,
+        )),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: defaultMediumPadding),
-          child: Text(title, style: TextStyle(fontSize: 12),),
+          child: Text(
+            title,
+            style: TextStyle(fontSize: 12),
+          ),
         ),
-        Expanded(child: Divider(color: bgBorder,)),
+        Expanded(
+            child: Divider(
+          color: bgBorder,
+        )),
       ],
     );
   }

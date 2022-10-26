@@ -1,14 +1,14 @@
-import 'package:dating_app_clone/components/box_svg_button.dart';
-import 'package:dating_app_clone/components/circle_button.dart';
-import 'package:dating_app_clone/components/discover_card.dart';
-import 'package:dating_app_clone/dummy_data/home_page_json.dart';
-import 'package:dating_app_clone/theme/color.dart';
-import 'package:dating_app_clone/utils/constant.dart';
+import 'package:dating_app/components/box_svg_button.dart';
+import 'package:dating_app/components/circle_button.dart';
+import 'package:dating_app/components/discover_card.dart';
+import 'package:dating_app/dummy_data/home_page_json.dart';
+import 'package:dating_app/theme/color.dart';
+import 'package:dating_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swipecards/flutter_swipecards.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({ Key? key }) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -53,21 +53,21 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Text(
                       "Discover",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold
-                      ),
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
-                    Text("Phnom Penh", style: TextStyle(fontSize: 12),)
+                    Text(
+                      "Phnom Penh",
+                      style: TextStyle(fontSize: 12),
+                    )
                   ],
                 ),
               ),
               Expanded(
-                child: BoxSvgButton(
-                  onTap: () {},
-                  svgPicture: "assets/images/filter.svg",
-                )
-              ),
+                  child: BoxSvgButton(
+                onTap: () {},
+                svgPicture: "assets/images/filter.svg",
+              )),
             ],
           ),
         ),
@@ -79,32 +79,32 @@ class _HomePageState extends State<HomePage> {
     return Column(
       children: [
         Expanded(
-          flex: 4,
-          child: TinderSwapCard(
-            cardController: controller,
-            maxHeight: size.height * 0.75,
-            maxWidth: size.width,
-            minHeight: size.height * 0.5,
-            minWidth: size.width * 0.8,
-            orientation: AmassOrientation.top,
-            swipeUp: true,
-            swipeDown: true,
-            stackNum: 2,
-            totalNum: itemLength,
-            cardBuilder: (context, index) {
-              return DiscoverCard(
-                itemList: items[index], 
-              );
-            },
-            swipeCompleteCallback: (CardSwipeOrientation orientation, int index) {
-              if(index == (items.length - 1)) {
-                setState(() {
-                  itemLength = items.length - 1;
-                });
-              }
-            },
-          ) 
-        ),
+            flex: 4,
+            child: TinderSwapCard(
+              cardController: controller,
+              maxHeight: size.height * 0.75,
+              maxWidth: size.width,
+              minHeight: size.height * 0.5,
+              minWidth: size.width * 0.8,
+              orientation: AmassOrientation.top,
+              swipeUp: true,
+              swipeDown: true,
+              stackNum: 2,
+              totalNum: itemLength,
+              cardBuilder: (context, index) {
+                return DiscoverCard(
+                  itemList: items[index],
+                );
+              },
+              swipeCompleteCallback:
+                  (CardSwipeOrientation orientation, int index) {
+                if (index == (items.length - 1)) {
+                  setState(() {
+                    itemLength = items.length - 1;
+                  });
+                }
+              },
+            )),
         Expanded(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,

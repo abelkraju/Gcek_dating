@@ -1,4 +1,4 @@
-import 'package:dating_app_clone/theme/color.dart';
+import 'package:dating_app/theme/color.dart';
 import 'package:flutter/material.dart';
 
 class CarouselDot extends StatelessWidget {
@@ -17,9 +17,7 @@ class CarouselDot extends StatelessWidget {
         height: 8,
         width: 8,
         decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: isActive ? primary : bgBorder
-        ),
+            shape: BoxShape.circle, color: isActive ? primary : bgBorder),
       ),
     );
   }

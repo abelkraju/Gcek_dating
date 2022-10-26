@@ -1,16 +1,15 @@
-
-import 'package:dating_app_clone/theme/color.dart';
-import 'package:dating_app_clone/utils/constant.dart';
+import 'package:dating_app/theme/color.dart';
+import 'package:dating_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class BoxSvgButton extends StatelessWidget {
   final String svgPicture;
   final VoidCallback onTap;
-  
+
   const BoxSvgButton({
-    Key? key, 
-    required this.svgPicture, 
+    Key? key,
+    required this.svgPicture,
     required this.onTap,
   }) : super(key: key);
 
@@ -24,9 +23,8 @@ class BoxSvgButton extends StatelessWidget {
         width: 52,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(defaultBorderRadius),
-          border: Border.all(width: 1, color: bgBorder)
-        ),
+            borderRadius: BorderRadius.circular(defaultBorderRadius),
+            border: Border.all(width: 1, color: bgBorder)),
         child: SvgPicture.asset(svgPicture),
       ),
     );

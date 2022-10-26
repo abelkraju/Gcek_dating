@@ -1,13 +1,12 @@
-
-import 'package:dating_app_clone/theme/color.dart';
-import 'package:dating_app_clone/utils/constant.dart';
+import 'package:dating_app/theme/color.dart';
+import 'package:dating_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 class MessageActivityCard extends StatelessWidget {
   final itemList;
-  
+
   const MessageActivityCard({
-    Key? key, 
+    Key? key,
     this.itemList,
   }) : super(key: key);
 
@@ -26,17 +25,17 @@ class MessageActivityCard extends StatelessWidget {
             child: Container(
               height: 70,
               decoration: BoxDecoration(
-                color: white,
-                shape: BoxShape.circle,
-                border: Border.all(width: 2, color: white),
-                image: DecorationImage(
-                  image: NetworkImage(itemList["imageUrl"]),
-                  fit: BoxFit.cover
-                )
-              ),
+                  color: white,
+                  shape: BoxShape.circle,
+                  border: Border.all(width: 2, color: white),
+                  image: DecorationImage(
+                      image: NetworkImage(itemList["imageUrl"]),
+                      fit: BoxFit.cover)),
             ),
           ),
-          SizedBox(height: defaultSmallPadding,),
+          SizedBox(
+            height: defaultSmallPadding,
+          ),
           Text(
             itemList["username"],
             maxLines: 1,

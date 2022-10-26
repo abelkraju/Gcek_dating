@@ -1,15 +1,14 @@
-
-import 'package:dating_app_clone/theme/color.dart';
-import 'package:dating_app_clone/utils/constant.dart';
+import 'package:dating_app/theme/color.dart';
+import 'package:dating_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 class BoxButton extends StatelessWidget {
   final String text;
   final VoidCallback onTap;
-  
+
   const BoxButton({
-    Key? key, 
-    required this.text, 
+    Key? key,
+    required this.text,
     required this.onTap,
   }) : super(key: key);
 
@@ -23,16 +22,12 @@ class BoxButton extends StatelessWidget {
         width: double.infinity,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(defaultBorderRadius),
-          color: primary
-        ),
+            borderRadius: BorderRadius.circular(defaultBorderRadius),
+            color: primary),
         child: Text(
-          text, 
+          text,
           style: TextStyle(
-            color: white, 
-            fontSize: 16, 
-            fontWeight: FontWeight.bold
-          ),
+              color: white, fontSize: 16, fontWeight: FontWeight.bold),
         ),
       ),
     );

@@ -1,12 +1,12 @@
-import 'package:dating_app_clone/components/box_svg_button.dart';
-import 'package:dating_app_clone/components/match_card.dart';
-import 'package:dating_app_clone/components/match_title.dart';
-import 'package:dating_app_clone/dummy_data/match_page_json.dart';
-import 'package:dating_app_clone/utils/constant.dart';
+import 'package:dating_app/components/box_svg_button.dart';
+import 'package:dating_app/components/match_card.dart';
+import 'package:dating_app/components/match_title.dart';
+import 'package:dating_app/dummy_data/match_page_json.dart';
+import 'package:dating_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 class MatchPage extends StatelessWidget {
-  const MatchPage({ Key? key }) : super(key: key);
+  const MatchPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +28,7 @@ class MatchPage extends StatelessWidget {
             children: [
               Text(
                 "Matches",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               BoxSvgButton(
                 onTap: () {},
@@ -41,7 +38,7 @@ class MatchPage extends StatelessWidget {
           ),
         ),
       ),
-    ); 
+    );
   }
 
   Widget getBody(Size size) {
@@ -55,8 +52,12 @@ class MatchPage extends StatelessWidget {
             style: TextStyle(fontSize: 16, height: 1.5),
           ),
         ),
-        MatchTitle(title: "Today",),
-        SizedBox(height: defaultMediumPadding,),
+        MatchTitle(
+          title: "Today",
+        ),
+        SizedBox(
+          height: defaultMediumPadding,
+        ),
         Wrap(
           spacing: 15,
           runSpacing: 15,
@@ -67,9 +68,15 @@ class MatchPage extends StatelessWidget {
             );
           }),
         ),
-        SizedBox(height: defaultPadding,),
-        MatchTitle(title: "Yesterday",),
-        SizedBox(height: defaultMediumPadding,),
+        SizedBox(
+          height: defaultPadding,
+        ),
+        MatchTitle(
+          title: "Yesterday",
+        ),
+        SizedBox(
+          height: defaultMediumPadding,
+        ),
         Wrap(
           spacing: 15,
           runSpacing: 15,
@@ -80,7 +87,9 @@ class MatchPage extends StatelessWidget {
             );
           }),
         ),
-        SizedBox(height: defaultPadding,),
+        SizedBox(
+          height: defaultPadding,
+        ),
       ],
     );
   }
